@@ -1,0 +1,394 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #e3e9ff 0%, #f6f8fa 100%);
+    color: #222;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background: #1c19d2;
+    color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 24px rgba(26,35,126,0.12);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.logo-small {
+    height: 60px;
+    width: auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 5px;
+    filter: brightness(1.25);
+    transition: transform 0.2s;
+}
+
+.logo-small:hover {
+    transform: scale(1.05);
+}
+
+.header-title h1 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #fff;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.header-title p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #1268af;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-small:first-child {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.btn-small:last-child {
+    background: white;
+    color: #1a237e;
+}
+
+.btn-small:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.btn-inscription {
+    background: #1976d2;
+    color: #fff;
+    border: 1px solid #1976d2;
+}
+
+.btn-inscription:hover, .btn-inscription:focus {
+    background: #1251a3;
+    color: #fff;
+    border: 1px solid #1251a3;
+}
+
+/* Main Content Styles */
+main {
+    margin: 100px 0 0 0;
+    max-width: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    background: none;
+    animation: none;
+    transition: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.35rem;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+section {
+    margin-bottom: 2.7rem;
+    animation: fadeInUp 0.8s;
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+main h1 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: #111;
+    line-height: 1.1;
+    margin: 1.2rem 0 0.2rem 0;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+main h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 1.1rem 0 0.7rem 0;
+    line-height: 1.15;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+section h2 {
+    color: #1a237e;
+    margin-bottom: 1.1rem;
+    font-size: 2.2rem;
+    border-left: 8px solid #1976d2;
+    padding-left: 1.3rem;
+    background: #f6f8fa;
+    border-radius: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+ul {
+    padding-left: 1.8rem;
+    font-size: 1.25rem;
+}
+li {
+    margin-bottom: 1.2rem;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    transition: color 0.2s;
+    border-radius: 8px;
+    padding: 0.3rem 0.7rem;
+}
+li strong {
+    color: #3949ab;
+    font-size: 1.28rem;
+}
+li:hover {
+    color: #ffb300;
+    background: #fffde7;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.3rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #3949ab;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    font-size: 1.22rem;
+    padding: 1.1rem 1.3rem;
+    width: 420px;
+    max-width: 98vw;
+    border: 1.7px solid #bdbdbd;
+    border-radius: 10px;
+    background: #f9f9f9;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 6px #1a237e11;
+    display: block;
+    margin: 0 auto;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border: 2px solid #1a237e;
+    outline: none;
+    background: #fff;
+    box-shadow: 0 2px 12px #1a237e22;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #1a237e 60%, #3949ab 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 1.1rem 3.2rem;
+    font-size: 1.35rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 12px #1a237e22;
+    transition: background 0.22s, transform 0.1s, box-shadow 0.22s;
+    margin-top: 0.5rem;
+}
+.btn-primary:hover, .btn-primary:focus {
+    background: linear-gradient(90deg, #ffb300 60%, #ffd54f 100%);
+    color: #1a237e;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px #ffb30033;
+}
+
+#formFeedback {
+    font-size: 1.22rem;
+    margin-top: 0.7rem;
+    min-height: 1.2em;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+footer {
+    background: #1c19d2;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0 1.2rem 0;
+    margin-top: 2.7rem;
+    border-radius: 0 0 22px 22px;
+    font-size: 1.08rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 -2px 12px #1a237e11;
+}
+
+/* Schedule Box Styles */
+.schedule-box {
+    background: #f6f8fa;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px #1a237e11;
+    padding: 1.3rem 1.7rem;
+    max-width: 440px;
+    margin: 0 auto;
+}
+.schedule-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+.online-notice {
+    margin-top: 1.3rem;
+    background: #e3e9ff;
+    border-radius: 10px;
+    padding: 0.8rem 1.1rem;
+    font-size: 1.05rem;
+    color: #1a237e;
+    box-shadow: 0 1px 6px #1a237e11;
+}
+
+/* Effet d'apparition des boutons dans les blocs services */
+/* .service-card-btn {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(18px) scale(0.98);
+    transition: opacity 0.22s, transform 0.22s;
+} */
+.service-card-btn {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+    transition: transform 0.22s, box-shadow 0.22s;
+    min-height: 48px;
+    display: block;
+}
+.service-card:hover .service-card-btn,
+.service-card:focus-within .service-card-btn {
+    transform: scale(1.13);
+    box-shadow: 0 4px 24px #ffb30044;
+}
+
+/* Pour éviter le décalage du layout, réserver la place du bouton */
+.service-card .service-card-btn {
+    min-height: 48px;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .header-container {
+        flex-direction: column;
+        gap: 1.2rem;
+        padding: 1.2rem 0;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    main {
+        padding: 0;
+        margin: 100px 0 0 0;
+        max-width: none;
+    }
+    section h2 {
+        font-size: 1.3rem;
+    }
+    .logo-small {
+        height: 48px;
+    }
+}
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        gap: 0.7rem;
+        padding: 0.7rem 0;
+    }
+    .logo-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    .logo-small {
+        margin-bottom: 0.5rem;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+    .auth-buttons {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.7rem;
+    }
+    main {
+        padding: 0;
+        margin: 100px 0 0 0;
+        max-width: none;
+    }
+}
